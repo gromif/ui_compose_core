@@ -52,7 +52,6 @@ fun Sheets.base(
     tonalElevation: Dp = BottomSheetDefaults.Elevation,
     scrimColor: Color = BottomSheetDefaults.ScrimColor,
     dragHandle: @Composable (() -> Unit)? = { BottomSheetDefaults.DragHandle() },
-    windowInsets: WindowInsets = BottomSheetDefaults.windowInsets,
     content: @Composable (ColumnScope.() -> Unit)
 ): MutableState<Boolean> {
     if (state.value) ModalBottomSheet(
@@ -68,7 +67,6 @@ fun Sheets.base(
         tonalElevation = tonalElevation,
         scrimColor = scrimColor,
         dragHandle = dragHandle,
-        windowInsets = windowInsets,
         content = content
     )
     return state

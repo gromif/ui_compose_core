@@ -23,8 +23,7 @@ fun BottomSheetWithToolbar(
 ) {
     if (isVisibleState.value) ModalBottomSheet(
         onDismissRequest = { isVisibleState.value = !isVisibleState.value },
-        sheetState = sheetState,
-        windowInsets = WindowInsets(0)
+        sheetState = sheetState
     ) {
         CenterAlignedTopAppBar(title = { Text(text = title) })
         content()
