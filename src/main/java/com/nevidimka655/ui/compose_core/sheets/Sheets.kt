@@ -2,7 +2,6 @@ package com.nevidimka655.ui.compose_core.sheets
 
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material3.BottomSheetDefaults
@@ -22,26 +21,28 @@ import com.nevidimka655.ui.compose_core.theme.spaces
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Sheets.default(
+fun SheetDefaults.default(
     onDismissRequest: (() -> Unit)? = null,
     state: MutableState<Boolean> = Compose.state(),
     sheetState: SheetState,
-    title: String,
+    title: String? = null,
     content: @Composable (ColumnScope.() -> Unit)
 ) = base(
     onDismissRequest = onDismissRequest,
     state = state,
     sheetState = sheetState
 ) {
-    Sheets.Components.Title(text = title)
-    Spacer(modifier = Modifier.height(MaterialTheme.spaces.spaceMedium))
+    if (title != null) {
+        SheetDefaults.Components.Title(text = title)
+        Spacer(modifier = Modifier.height(MaterialTheme.spaces.spaceMedium))
+    }
     content()
     Spacer(modifier = Modifier.navigationBarsPadding())
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun Sheets.base(
+fun SheetDefaults.base(
     onDismissRequest: (() -> Unit)? = null,
     state: MutableState<Boolean> = Compose.state(),
     sheetState: SheetState,

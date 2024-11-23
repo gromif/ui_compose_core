@@ -3,9 +3,9 @@ package com.nevidimka655.ui.compose_core
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.AutoAwesome
 import androidx.compose.material3.Button
+import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.FilledTonalIconButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -58,6 +58,32 @@ fun ButtonWithIcon(
     Spacer(modifier = Modifier.width(MaterialTheme.spaces.spaceMedium))
     Text(text = title)
 }
+
+@Composable
+fun FilledTonalButtonWithIcon(
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    icon: ImageVector,
+    title: String,
+    onClick: () -> Unit
+) = FilledTonalButton(
+    modifier = modifier, onClick = onClick, enabled = enabled
+) {
+    Icon(icon, null, modifier = Modifier.size(16.dp))
+    Spacer(modifier = Modifier.width(MaterialTheme.spaces.spaceMedium))
+    Text(text = title)
+}
+
+@Composable
+fun FilledTonalIconButton(
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    icon: ImageVector,
+    contentDescription: String,
+    onClick: () -> Unit
+) = FilledTonalIconButton(
+    modifier = modifier, onClick = onClick, enabled = enabled
+) { Icon(icon, contentDescription) }
 
 @Composable
 fun IconButton(

@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 
-object Sheets {
+object SheetDefaults {
 
     object Components
 
@@ -22,7 +22,7 @@ object Sheets {
 
 @Preview(showBackground = true)
 @Composable
-fun Sheets.Components.Title(text: String = "Create New") = Text(
+fun SheetDefaults.Components.Title(text: String = "Create New") = Text(
     modifier = Modifier.fillMaxWidth(),
     text = text,
     style = MaterialTheme.typography.titleLarge,
