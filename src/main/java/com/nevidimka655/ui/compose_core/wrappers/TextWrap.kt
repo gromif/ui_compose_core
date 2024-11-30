@@ -1,19 +1,20 @@
 package com.nevidimka655.ui.compose_core.wrappers
 
+import android.content.Context
 import androidx.annotation.StringRes
 
-class TextWrap {
-    @StringRes
-    var id: Int? = null
-        private set
-    var text: String? = null
-        private set
+sealed class TextWrap {
+    abstract fun resolve(context: Context): String
 
-    constructor(@StringRes id: Int) {
-        this.id = id
+    data class Resource(@StringRes val id: Int) : TextWrap() {
+        override fun resolve(context: Context): String {
+            return context.getString(id)
+        }
     }
 
-    constructor(text: String) {
-        this.text = text
+    data class Text(val text: String) : TextWrap() {
+        override fun resolve(context: Context): String {
+            return text
+        }
     }
 }
