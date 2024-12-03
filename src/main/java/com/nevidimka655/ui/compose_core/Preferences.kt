@@ -31,7 +31,6 @@ fun PreferencesScreen(content: @Composable ColumnScope.() -> Unit) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .nestedScroll(rememberNestedScrollInteropConnection())
             .verticalScroll(rememberScrollState())
             .padding(MaterialTheme.spaces.spaceMedium),
         verticalArrangement = Arrangement.spacedBy(MaterialTheme.spaces.spaceMedium),
