@@ -13,10 +13,10 @@ import com.nevidimka655.ui.compose_core.Compose
 import com.nevidimka655.ui.compose_core.TextFieldsDefaults
 
 @Composable
-fun Dialogs.TextFields.default(
+fun DialogsCore.TextFields.default(
     state: MutableState<Boolean> = Compose.state(),
     title: String,
-    params: Dialogs.TextFields.Params,
+    params: DialogsCore.TextFields.Params,
     onResult: (String) -> Unit
 ): MutableState<Boolean> {
     if (!state.value) return state

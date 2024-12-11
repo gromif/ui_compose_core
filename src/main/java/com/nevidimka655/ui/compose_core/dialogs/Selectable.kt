@@ -8,7 +8,7 @@ import com.nevidimka655.ui.compose_core.Compose
 import com.nevidimka655.ui.compose_core.RadioOneLineListItem
 
 @Composable
-fun Dialogs.Selectable.radio(
+fun DialogsCore.Selectable.radio(
     onDismissRequest: () -> Unit = {},
     onSelected: (Int) -> Unit,
     title: String,

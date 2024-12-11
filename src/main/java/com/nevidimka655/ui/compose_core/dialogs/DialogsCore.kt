@@ -6,7 +6,7 @@ import androidx.compose.runtime.MutableState
 import androidx.compose.ui.res.stringResource
 import com.nevidimka655.ui.compose_core.Compose
 
-object Dialogs {
+object DialogsCore {
 
     object Components
 

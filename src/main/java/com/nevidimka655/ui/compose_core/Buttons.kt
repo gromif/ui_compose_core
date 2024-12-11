@@ -90,6 +90,7 @@ fun IconButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     icon: ImageVector,
+    contentDescription: String? = null,
     onClick: () -> Unit
 ) = androidx.compose.material3.IconButton(
     onClick = onClick, modifier = modifier, enabled = enabled
