@@ -30,7 +30,7 @@ fun DialogsCore.TextFields.default(
         onDismissRequest = { state.value = false },
         onConfirmRequest = {
             state.value = false
-            onResult(textValue.text.trim())
+            onResult(textValue.text)
         },
         isConfirmButtonEnabled = textValue.text.isNotBlank()
     ) {
