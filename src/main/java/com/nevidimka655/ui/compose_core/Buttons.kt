@@ -35,7 +35,7 @@ fun OutlinedButtonWithIcon(
     modifier: Modifier = Modifier,
     icon: ImageVector,
     title: String,
-    onClick: () -> Unit
+    onClick: () -> Unit = {}
 ) = OutlinedButton(
     modifier = modifier, onClick = onClick
 ) {
@@ -79,7 +79,7 @@ fun FilledTonalIconButton(
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     icon: ImageVector,
-    contentDescription: String,
+    contentDescription: String? = null,
     onClick: () -> Unit
 ) = FilledTonalIconButton(
     modifier = modifier, onClick = onClick, enabled = enabled
