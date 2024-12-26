@@ -23,6 +23,4 @@ dependencies {
 
     api(libs.compose.ui.tooling)
     debugApi(libs.compose.ui.test.manifest)
-
-    api(libs.androidx.core.ktx)
 }
