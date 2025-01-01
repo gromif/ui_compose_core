@@ -36,7 +36,7 @@ object TextFields {
     fun label(text: String) = @Composable { Text(text = text) }
 
     @Composable
-    fun supportingTextLengthCounter(length: Int, maxLength: Int) = @Composable {
+    fun supportingCounter(length: Int, maxLength: Int) = @Composable {
         Text(
             modifier = Modifier.fillMaxWidth(),
             text = "$length/$maxLength",
