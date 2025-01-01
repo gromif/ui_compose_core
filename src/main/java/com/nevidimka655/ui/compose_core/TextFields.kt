@@ -30,7 +30,7 @@ object TextFields {
     }
 
     @Composable
-    fun placeholderText(text: String) = @Composable { Text(text = text) }
+    fun placeholder(text: String) = @Composable { Text(text = text) }
 
     @Composable
     fun labelText(text: String) = @Composable { Text(text = text) }
