@@ -42,7 +42,7 @@ fun DialogsCore.TextFields.default(
                 if (it.text.length <= params.maxLength) textValue = it
             },
             supportingText = when {
-                !params.supportingText.isNullOrBlank() -> TextFields.supportingText(
+                !params.supportingText.isNullOrBlank() -> TextFields.supporting(
                     text = params.supportingText
                 )
                 params.maxLength != Int.MAX_VALUE -> TextFields.supportingTextLengthCounter(

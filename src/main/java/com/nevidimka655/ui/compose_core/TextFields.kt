@@ -45,9 +45,7 @@ object TextFields {
     }
 
     @Composable
-    fun supportingText(text: String) = @Composable {
-        Text(text = text)
-    }
+    fun supporting(text: String) = @Composable { Text(text = text) }
 
     @Composable
     fun passwordVisualTransform(state: Boolean) = if (!state) {
