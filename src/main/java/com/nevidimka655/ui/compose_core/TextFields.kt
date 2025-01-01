@@ -8,7 +8,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextRange
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 
 object TextFieldsDefaults {
@@ -46,5 +48,10 @@ object TextFieldsDefaults {
     fun supportingText(text: String) = @Composable {
         Text(text = text)
     }
+
+    @Composable
+    fun passwordVisualTransform(state: Boolean) = if (!state) {
+        PasswordVisualTransformation()
+    } else VisualTransformation.None
 
 }
