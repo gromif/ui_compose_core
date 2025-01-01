@@ -52,7 +52,7 @@ fun DialogsCore.TextFields.default(
                 else -> null
             },
             singleLine = params.singleLine,
-            label = params.label?.let { TextFields.labelText(text = it) },
+            label = params.label?.let { TextFields.label(text = it) },
             keyboardOptions = params.keyboardOptions
         )
 

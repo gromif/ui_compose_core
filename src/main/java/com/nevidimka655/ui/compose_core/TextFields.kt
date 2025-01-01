@@ -33,7 +33,7 @@ object TextFields {
     fun placeholder(text: String) = @Composable { Text(text = text) }
 
     @Composable
-    fun labelText(text: String) = @Composable { Text(text = text) }
+    fun label(text: String) = @Composable { Text(text = text) }
 
     @Composable
     fun supportingTextLengthCounter(length: Int, maxLength: Int) = @Composable {
