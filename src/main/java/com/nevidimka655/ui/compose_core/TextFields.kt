@@ -13,6 +13,8 @@ import androidx.compose.ui.text.style.TextAlign
 
 object TextFieldsDefaults {
 
+    object Icons
+
     @Composable
     fun textFieldValue(text: String = "", selectAll: Boolean = false) = rememberSaveable(
         stateSaver = TextFieldValue.Saver
