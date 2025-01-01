@@ -6,10 +6,10 @@ import androidx.compose.material.icons.filled.VisibilityOff
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.runtime.Composable
-import com.nevidimka655.ui.compose_core.TextFieldsDefaults
+import com.nevidimka655.ui.compose_core.TextFields
 
 @Composable
-fun TextFieldsDefaults.Icons.PasswordToggleIconButton(
+fun TextFields.Icons.PasswordToggleIconButton(
     visible: Boolean,
     onChangeVisibility: (Boolean) -> Unit
 ) = IconButton(onClick = { onChangeVisibility(!visible) }) {

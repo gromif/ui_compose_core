@@ -10,7 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import com.nevidimka655.ui.compose_core.Compose
-import com.nevidimka655.ui.compose_core.TextFieldsDefaults
+import com.nevidimka655.ui.compose_core.TextFields
 
 @Composable
 fun DialogsCore.TextFields.default(
@@ -21,7 +21,7 @@ fun DialogsCore.TextFields.default(
 ): MutableState<Boolean> {
     if (!state.value) return state
 
-    var textValue by TextFieldsDefaults.textFieldValue(
+    var textValue by TextFields.textFieldValue(
         text = params.text,
         selectAll = params.selectAllText
     )
@@ -42,17 +42,17 @@ fun DialogsCore.TextFields.default(
                 if (it.text.length <= params.maxLength) textValue = it
             },
             supportingText = when {
-                !params.supportingText.isNullOrBlank() -> TextFieldsDefaults.supportingText(
+                !params.supportingText.isNullOrBlank() -> TextFields.supportingText(
                     text = params.supportingText
                 )
-                params.maxLength != Int.MAX_VALUE -> TextFieldsDefaults.supportingTextLengthCounter(
+                params.maxLength != Int.MAX_VALUE -> TextFields.supportingTextLengthCounter(
                     length = textValue.text.length,
                     maxLength = params.maxLength
                 )
                 else -> null
             },
             singleLine = params.singleLine,
-            label = params.label?.let { TextFieldsDefaults.labelText(text = it) },
+            label = params.label?.let { TextFields.labelText(text = it) },
             keyboardOptions = params.keyboardOptions
         )
 
