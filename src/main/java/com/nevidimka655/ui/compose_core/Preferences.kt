@@ -96,19 +96,16 @@ inline fun PreferencesSwitch(
     summaryText: String? = null,
     isAutoSwitchState: Boolean = true,
     crossinline callback: (Boolean) -> Unit
-) {
-    val view = LocalView.current
-    PreferencesSwitch(
-        isChecked = state.value,
-        titleText = titleText,
-        summaryText = summaryText,
-        callback = {
-            Haptic.toggle(state = it)
-            if (isAutoSwitchState) state.value = it
-            callback(it)
-        }
-    )
-}
+) = PreferencesSwitch(
+    isChecked = state.value,
+    titleText = titleText,
+    summaryText = summaryText,
+    callback = {
+        Haptic.toggle(state = it)
+        if (isAutoSwitchState) state.value = it
+        callback(it)
+    }
+)
 
 @Composable
 inline fun PreferencesSwitch(
@@ -116,21 +113,18 @@ inline fun PreferencesSwitch(
     titleText: String,
     summaryText: String? = null,
     crossinline callback: (Boolean) -> Unit
-) {
-    val view = LocalView.current
-    AutoLineListItem(
-        modifier = Modifier.toggleable(
-            value = isChecked,
-            role = Role.Switch,
-            onValueChange = {
-                if (it) view.hapticToggleOn() else view.hapticToggleOff()
-                callback(it)
-            }
-        ),
-        titleText = titleText,
-        summaryText = summaryText,
-        trailingContent = {
-            Switch(checked = isChecked, onCheckedChange = null)
+) = AutoLineListItem(
+    modifier = Modifier.toggleable(
+        value = isChecked,
+        role = Role.Switch,
+        onValueChange = {
+            Haptic.toggle(state = it)
+            callback(it)
         }
-    )
-}
+    ),
+    titleText = titleText,
+    summaryText = summaryText,
+    trailingContent = {
+        Switch(checked = isChecked, onCheckedChange = null)
+    }
+)
