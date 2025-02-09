@@ -14,7 +14,7 @@ android {
 }
 
 dependencies {
-    api(project(mapOf("path" to ":core:haptic")))
+    api(projects.ui.haptic)
     api(platform(libs.compose.bom))
     api(libs.compose.material3.icons.core)
     api(libs.compose.material3.icons.extended)
