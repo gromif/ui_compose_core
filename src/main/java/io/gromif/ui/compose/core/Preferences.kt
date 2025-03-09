@@ -18,8 +18,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.Role
-import com.nevidimka655.haptic.Haptic
 import io.gromif.ui.compose.core.theme.spaces
+import io.gromif.ui.haptic.Haptic
 
 @Composable
 fun PreferencesScreen(content: @Composable ColumnScope.() -> Unit) {

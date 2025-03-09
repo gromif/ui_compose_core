@@ -6,7 +6,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
-import com.nevidimka655.haptic.Haptic
+import io.gromif.ui.haptic.Haptic
 
 object Chips {
 
