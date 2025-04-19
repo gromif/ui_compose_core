@@ -1,6 +1,5 @@
 package io.gromif.ui.compose.core.dialogs
 
-import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
@@ -127,9 +126,9 @@ object DialogDefaults {
         onConfirmClick: () -> Unit,
         onDismissClick: () -> Unit,
         isConfirmButtonEnabled: Boolean = false,
-        confirmText: String = stringResource(id = R.string.ok),
+        confirmText: String = stringResource(id = android.R.string.ok),
         confirmIcon: ImageVector = Icons.Default.Done,
-        dismissText: String = stringResource(id = R.string.cancel),
+        dismissText: String = stringResource(id = android.R.string.cancel),
         dismissIcon: ImageVector = Icons.Default.Close
     ): @Composable (() -> Unit) = {
         Row(horizontalArrangement = Arrangement.spacedBy(MaterialTheme.spaces.spaceSmall)) {

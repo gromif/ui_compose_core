@@ -1,6 +1,5 @@
 package io.gromif.ui.compose.core.dialogs
 
-import android.R
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -31,8 +30,8 @@ object DialogsCore {
     fun simple(
         title: String?,
         text: String,
-        confirmText: String = stringResource(id = R.string.ok),
-        dismissText: String? = stringResource(id = R.string.cancel),
+        confirmText: String = stringResource(id = android.R.string.ok),
+        dismissText: String? = stringResource(id = android.R.string.cancel),
         dismissOnButtonClick: Boolean = true,
         dismissOnOutsideClick: Boolean = true,
         onDismissRequest: (() -> Unit)? = null,

@@ -1,6 +1,5 @@
 package io.gromif.ui.compose.core.dialogs
 
-import android.R
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
@@ -20,7 +19,7 @@ fun DialogsCore.Selectable.radio(
     if (state.value) Dialog(
         title = DialogDefaults.titleCentered(title = title),
         confirmButton = DialogDefaults.textButton(
-            title = stringResource(id = R.string.cancel),
+            title = stringResource(id = android.R.string.cancel),
             onClick = {
                 state.value = false
                 onDismissRequest()
